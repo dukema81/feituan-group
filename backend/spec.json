@@ -1,0 +1,269 @@
+{
+  "brand": {
+    "name": "飞团",
+    "full": "飞团社交拼团电商",
+    "tagline": "好友成团 · 越拼越省",
+    "port": 8103
+  },
+  "tables": [
+    {
+      "name": "products",
+      "label": "商品",
+      "fields": [
+        {
+          "name": "title",
+          "label": "商品名",
+          "type": "text"
+        },
+        {
+          "name": "price",
+          "label": "价格(元)",
+          "type": "number"
+        },
+        {
+          "name": "stock",
+          "label": "库存",
+          "type": "int"
+        },
+        {
+          "name": "category",
+          "label": "分类",
+          "type": "text"
+        },
+        {
+          "name": "desc",
+          "label": "描述",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "广西百香果 5斤装",
+          29.9,
+          2000,
+          "水果",
+          "拼团价 单买39.9"
+        ],
+        [
+          "抽纸 24包整箱",
+          39.9,
+          3000,
+          "日用",
+          "3人团 48h成团"
+        ],
+        [
+          "儿童保温碗",
+          49,
+          800,
+          "母婴",
+          "注水控温 拼团爆款"
+        ]
+      ]
+    },
+    {
+      "name": "group_buys",
+      "label": "拼团活动",
+      "fields": [
+        {
+          "name": "product_id",
+          "label": "商品ID",
+          "type": "int"
+        },
+        {
+          "name": "title",
+          "label": "团名",
+          "type": "text"
+        },
+        {
+          "name": "size",
+          "label": "成团人数",
+          "type": "int"
+        },
+        {
+          "name": "joined",
+          "label": "已参团",
+          "type": "int"
+        },
+        {
+          "name": "deadline",
+          "label": "截止时间",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "状态",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          1,
+          "百香果 3人团",
+          3,
+          2,
+          "10-26 20:00",
+          "拼团中"
+        ],
+        [
+          2,
+          "抽纸 3人团",
+          3,
+          3,
+          "10-25 20:00",
+          "已成团"
+        ],
+        [
+          3,
+          "保温碗 2人团",
+          2,
+          1,
+          "10-27 20:00",
+          "拼团中"
+        ]
+      ]
+    },
+    {
+      "name": "group_members",
+      "label": "参团记录",
+      "fields": [
+        {
+          "name": "group_id",
+          "label": "团ID",
+          "type": "int"
+        },
+        {
+          "name": "user",
+          "label": "参团人",
+          "type": "text"
+        },
+        {
+          "name": "pay_status",
+          "label": "支付状态",
+          "type": "text"
+        },
+        {
+          "name": "join_time",
+          "label": "参团时间",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          2,
+          "阿芳",
+          "已支付",
+          "10-24 18:01"
+        ],
+        [
+          2,
+          "阿芳的朋友圈-老陈",
+          "已支付",
+          "10-24 18:15"
+        ],
+        [
+          1,
+          "小飞",
+          "已支付",
+          "10-24 19:40"
+        ]
+      ]
+    },
+    {
+      "name": "cart",
+      "label": "购物车",
+      "fields": [
+        {
+          "name": "user",
+          "label": "用户",
+          "type": "text"
+        },
+        {
+          "name": "product_id",
+          "label": "商品ID",
+          "type": "int"
+        },
+        {
+          "name": "qty",
+          "label": "数量",
+          "type": "int"
+        }
+      ],
+      "seed": []
+    },
+    {
+      "name": "orders",
+      "label": "订单",
+      "fields": [
+        {
+          "name": "order_no",
+          "label": "订单号",
+          "type": "text"
+        },
+        {
+          "name": "user",
+          "label": "下单人",
+          "type": "text"
+        },
+        {
+          "name": "items",
+          "label": "商品明细",
+          "type": "text"
+        },
+        {
+          "name": "total",
+          "label": "金额(元)",
+          "type": "number"
+        },
+        {
+          "name": "address",
+          "label": "收货地址",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "状态",
+          "type": "text"
+        }
+      ],
+      "seed": []
+    },
+    {
+      "name": "users",
+      "label": "用户",
+      "fields": [
+        {
+          "name": "username",
+          "label": "用户名",
+          "type": "text"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "type": "text"
+        },
+        {
+          "name": "role",
+          "label": "角色",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "admin",
+          "admin123",
+          "admin"
+        ],
+        [
+          "ops01",
+          "ops123456",
+          "ops"
+        ],
+        [
+          "view01",
+          "view123456",
+          "viewer"
+        ]
+      ]
+    }
+  ]
+}
