@@ -1,27 +1,42 @@
-# 飞团社交拼团电商
+# 🛍️ 飞团社交拼团电商
 
-> 好友成团 · 越拼越省
+> 以社交裂变驱动的拼团购物平台，让购物更有趣、更划算
 
-零依赖（Python 标准库 + SQLite）的 飞团，飞系电商系列成员。
+## 📖 项目简介
 
-## 运行
+飞团社交拼团电商是一款融合社交关系与电商交易的新零售平台，通过拼团、分享、裂变等玩法激发用户传播动力，结合限时团购与团长体系，打造高转化、高复购的社交电商生态。
+
+## ✨ 核心特性
+
+- 👥 **社交拼团** — 多人成团、阶梯价、老带新裂变机制
+- 🔗 **分享裂变** — 一键分享至微信、朋友圈、社群，自动生成海报
+- ⏰ **限时团购** — 倒计时、限量特惠、秒杀活动配置
+- 🎖️ **团长体系** — 团长招募、等级晋升、佣金分润与团队管理
+- 📦 **商品管理** — SKU 管理、库存预警、分类与标签体系
+- 📈 **数据运营** — 拼团转化分析、用户画像、团长排行榜
+- 💳 **支付结算** — 微信支付、退款、团长佣金自动结算
+
+## 🚀 快速开始
 
 ```bash
-cd backend
-python server.py
-# 访问 http://127.0.0.1:8103/ ，三角色: admin/admin123 · ops01/ops123456 · view01/view123456
+# 克隆项目
+git clone https://github.com/dukema81/feituan-group.git
+cd feituan-group
+
+# 安装依赖
+npm install
+
+# 启动开发环境
+npm run dev
+
+# 构建生产版本
+npm run build
 ```
 
-## 测试
+## 📄 许可证
 
-```bash
-python -m pytest tests/ -q
-```
+本项目基于 [MIT License](LICENSE) 开源许可协议。
 
-## 目录
+---
 
-- backend/  通用引擎 engine.py + 规格 spec.json + 服务入口 server.py
-- frontend/ 原生 JS SPA（门店 + 统计 + 规格驱动后台）
-- tools/    专属 Logo（icon.svg）+ UI 巡检（ui_check.py，零依赖探活+截图）
-- docs/     建设方案
-- tests/    API 集成测试（真实起服务全链路断言）
+Made with ❤️ by dukema81
